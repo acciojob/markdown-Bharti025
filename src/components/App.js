@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className='app'>
     <div className='input'>
-     <textarea className='textarea' placeholder='# ' onChange={handleChange}></textarea>
+     <textarea className='textarea' placeholder='#' onChange={handleChange}></textarea>
     </div>
     <div className='preview'>
         <h1 className='preview-title'></h1>
