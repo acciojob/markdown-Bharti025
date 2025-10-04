@@ -7,16 +7,17 @@ const App = () => {
         setText(e.target.value);
     }
    useEffect(()=>{
-      document.querySelector('.preview h1').innerHTML=text;
+     let output= document.getElementsByClassName('preview-title')[0];
+     output.innerText=text;
    },[text]);
 
   return (
     <div className='app'>
     <div className='input'>
-     <textarea className='textarea' onChange={handleChange}></textarea>
+     <textarea className='textarea' placeholder='# ' onChange={handleChange}></textarea>
     </div>
     <div className='preview'>
-        <h1>{text}</h1>
+        <h1 className='preview-title'></h1>
     </div>
     </div>
   )
