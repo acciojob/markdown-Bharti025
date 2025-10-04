@@ -7,7 +7,7 @@ const App = () => {
     }
    useEffect(()=>{
     let output= document.getElementsByClassName("preview");
-    output[0].innerText=text;
+    output[0].innerHTML=<h1>{text}</h1>;
    },[text]);
 
   return (
