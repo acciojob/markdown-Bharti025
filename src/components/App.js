@@ -2,12 +2,12 @@ import React,{useState,useEffect} from 'react'
 import '../styles/App.css'
 const App = () => {
     const [text,setText]=useState("");
+    
     const handleChange=(e)=>{
         setText(e.target.value);
     }
    useEffect(()=>{
-    let output= document.getElementsByClassName("preview");
-    output[0].innerHTML=<h1>{text}</h1>;
+      document.querySelector('.preview h1').innerHTML=text;
    },[text]);
 
   return (
@@ -15,7 +15,9 @@ const App = () => {
     <div className='input'>
      <textarea className='textarea' onChange={handleChange}></textarea>
     </div>
-    <div className='preview'></div>
+    <div className='preview'>
+        <h1>{text}</h1>
+    </div>
     </div>
   )
 }
